@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Tên App</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home" class="no-scroll">
+  <div class="wrapbottom">
+  <ion-img  src="img/ionic_resize.png" background-color="white" (click)="ScanCode()"></ion-img>
+  <br>
+  
+    <div class ="bottom">
+      <ion-item>
+        <ion-label class ="labelCode" floating >Nhập Mã Ở Đây</ion-label>
+        <ion-input type="text" [(ngModel)]="codeInput"></ion-input>
+      </ion-item>
+      <!--<h3> {{codeInput}}</h3>-->
+      <br>
+      <span class="button-wrapper">
+        <button ion-button round icon-left (click)=clearInput()>Clear</button>
+        <button  ion-button round icon-right (click)=enterInput()>Enter</button>
+      </span>
+    </div>
+  </div>
+
+  <!--This is code   <ion-item *ngIf=readyData>  {{name}} </ion-item>-->
+    <!--<button type="button" (click)="ScanCode()">Click </button>-->
+
+</ion-content>

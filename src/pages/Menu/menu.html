@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Menu</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-list inset>
+    <button ion-button full round  *ngFor="let item of menuItems" (click)="itemSelected(item)">
+      {{ item.name }}
+    </button>
+  </ion-list>
+</ion-content>
