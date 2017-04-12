@@ -63,4 +63,26 @@ export class MoreInfo {
       value:"20 củ khoai"
     }
   ]
+  //method
+  public clickTrangTrai(){
+    console.log("click Trang Trai");
+    
+  }
+
+  public clickGietMo(){
+    console.log("click Giet Mo");
+    
+  }
+  
+  public clickBanSi(){
+    console.log("click Ban Si");
+    
+  }
+  
+  public clickCuaHang(){
+    console.log("click Cua Hang");
+    
+  }
+
+ 
 }

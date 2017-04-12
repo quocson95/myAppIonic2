@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content class="home">
-   <ion-item>
+   <ion-item (click)="clickTrangTrai()">
     <ion-avatar item-left>
       <img src="img/ionic_resize.png">
     </ion-avatar>
@@ -12,7 +12,7 @@
     </page-templateInfo>   
   </ion-item>
 
-<ion-item>
+<ion-item (click)="clickGietMo()">
     <ion-avatar item-left>
       <img src="img/ionic_resize.png">
     </ion-avatar>
@@ -20,15 +20,21 @@
    </page-templateInfo>
 </ion-item>
 
-<ion-item>
+<ion-item (click)="clickBanSi()">
+    <ion-avatar item-left>
+      <img src="img/ionic_resize.png">
+    </ion-avatar>
+   <page-templateInfo [nameOfBase] = "nameBaseBanSi" [dataOfBase]="bansiBase">
+   </page-templateInfo>
+</ion-item>
+
+<ion-item (click)="clickCuaHang()">
     <ion-avatar item-left>
       <img src="img/ionic_resize.png">
     </ion-avatar>
    <page-templateInfo [nameOfBase] = "nameBaseCuaHang" [dataOfBase]="cuahangBase">
    </page-templateInfo>
 </ion-item>
-
-
 
 </ion-content>
 
