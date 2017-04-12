@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Kết quả truy xuất </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="home">
+    <ion-img src="https://pioneers.io/wp-content/uploads/2013/04/300x20025.gif" background-color="white"> </ion-img>
+    <ion-list >
+        <ion-item>
+            <ion-thumbnail item-left>
+            <img src="img/check_ok.png">
+        </ion-thumbnail>
+            <h2>My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-right></button>
+        </ion-item>
+    </ion-list>
+
+<!--This is infomation simple about product-->
+    <ion-list insert>
+        <div  *ngFor="let item of items">
+            <ion-item>
+                <span class ="listitem"> {{item.name}} </span>
+            <ion-icon item-right > 
+                <span class ="listitem">  {{item.value}} </span>
+            </ion-icon>
+            </ion-item>
+        </div>
+    </ion-list>
+    <div class="centerbutton">
+        <button ion-button color="blue" round (click)=moreInfo()>Thêm thông tin</button>
+    </div>
+</ion-content>
+

@@ -7,7 +7,12 @@ import { Scan } from '../pages/Scan/scan';
 import { Menu } from '../pages/Menu/menu';
 import { TabsPage } from '../pages/Tabs/tab';
 import { Camera } from '@ionic-native/camera';
-import { SimpleInfo } from '../pages/Infomation/simpleInfo';
+import { HistoryMenu } from '../pages/Menu/History/history';
+import { BackandService } from '../pages/Service/backandService';
+import { TemplateInfo } from '../pages/Infomation/MoreInfo/templateInfo'
+//Information
+import { SimpleInfo } from '../pages/Infomation/SimpleInfo/simpleInfo';
+import { MoreInfo } from '../pages/Infomation/MoreInfo/moreInfo';
 
 @NgModule({
   declarations: [
@@ -16,6 +21,9 @@ import { SimpleInfo } from '../pages/Infomation/simpleInfo';
     Scan,
     TabsPage,
     SimpleInfo,
+    HistoryMenu,
+    MoreInfo,
+    TemplateInfo,
 
   ],
   imports: [
@@ -28,12 +36,16 @@ import { SimpleInfo } from '../pages/Infomation/simpleInfo';
     Scan,
     TabsPage,
     SimpleInfo,
+    HistoryMenu,
+    MoreInfo,
+    TemplateInfo,
     
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
+    BackandService,
     
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

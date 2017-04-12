@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,Platform } from 'ionic-angular';
 //This using for BarcodeScanner
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 //this is using for Loading page
 import { LoadingController } from 'ionic-angular';
-import { SimpleInfo } from '../Infomation/simpleInfo';
+import { SimpleInfo } from '../Infomation/SimpleInfo/simpleInfo';
+import { BackandService } from '../Service/backandService';
+
 @Component({
   selector: 'page-scan',
   templateUrl: 'scan.html',
@@ -15,24 +17,28 @@ import { SimpleInfo } from '../Infomation/simpleInfo';
 })
 
 export class Scan {
+  public items:any[] = [];
   public name ="Mrkeys";
   public readyData = false;
   public codeInput;
   constructor(public navCtrl: NavController,private barcodeScanner: BarcodeScanner,
-              public loadingCtrl: LoadingController) {  
+              private loadingCtrl: LoadingController,private backandService:BackandService) {  
     this.navCtrl = navCtrl;  
   }
-  presentLoading() {
+  //mothod
+  public presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Please wait...",
       duration: 1000
     });
     loader.present();
   }
-  goTosimpleInfoPage(){
+  //Push Page Info Simple
+  public goTosimpleInfoPage(){
     this.navCtrl.push(SimpleInfo);
   }
-  ScanCode(){
+  //Function check code QR or Bar from camera
+  public ScanCode(){
     //this.presentLoading();
     this.readyData = false;
     this.barcodeScanner.scan({
@@ -49,14 +55,40 @@ export class Scan {
       // An error occurred
     });
   }
-  clearInput(){
+  //Clear Input in box code
+  public clearInput(){
     this.codeInput = "";
     console.log("Clear Input Function");
+    this.getItems('SuperMarket'); 
+    this.getOne('SuperMarket','1')  ;
   }
-  enterInput(){
+  //Function for Enter button
+  public enterInput(){
     console.log("Enter Input Function");
     console.log(this.codeInput);
     this.goTosimpleInfoPage();
-    
   }
+  //Get item form backand service
+  public getItems(request:string) {
+       this.backandService.getList(request)
+            .subscribe(
+                data => {
+                    console.log(data);
+                    this.items = data;
+                },
+                err => this.backandService.logError(err),
+                () => console.log('OK')
+            );
+    }
+      public getOne(request:string,id:string) {
+       this.backandService.getOne(request,id)
+            .subscribe(
+                data => {
+                    console.log(data);
+                    this.items = data;
+                },
+                err => this.backandService.logError(err),
+                () => console.log('OK')
+            );
+    }
 }

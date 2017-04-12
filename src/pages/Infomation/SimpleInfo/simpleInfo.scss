@@ -1,0 +1,23 @@
+ion-img{
+    background-color: #ffffff;
+   width: 100%;
+    height: auto;
+    min-height: 280px;
+    max-height: 320px;
+    display: inherit; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    
+}
+ion-img.img-loaded img{ 
+  margin: 0 auto;
+  margin-top: 10px;
+  
+}
+.listitem{
+    font-size: 20px;
+}
+.centerbutton{
+    text-align:center;
+}

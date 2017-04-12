@@ -1,0 +1,11 @@
+ <ion-card-content>
+    <h1>{{nameOfBase}}</h1>
+    <ion-grid >
+        <div *ngFor="let dataofbase of dataOfBase" class="listitem_2">
+            <ion-row>
+                <ion-col col-7> {{dataofbase.name}} </ion-col>            
+                <ion-col col-5>{{dataofbase.value}}</ion-col>
+            </ion-row>
+        </div>
+    </ion-grid>
+  </ion-card-content>

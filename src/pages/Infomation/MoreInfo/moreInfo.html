@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Thêm thông tin </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="home">
+   <ion-item>
+    <ion-avatar item-left>
+      <img src="img/ionic_resize.png">
+    </ion-avatar>
+    <page-templateInfo [nameOfBase] = "nameBaseTrangTrai" [dataOfBase]="trangtraiBase">
+    </page-templateInfo>   
+  </ion-item>
+
+<ion-item>
+    <ion-avatar item-left>
+      <img src="img/ionic_resize.png">
+    </ion-avatar>
+   <page-templateInfo [nameOfBase] = "nameBaseGietMo" [dataOfBase]="gietmoBase">
+   </page-templateInfo>
+</ion-item>
+
+<ion-item>
+    <ion-avatar item-left>
+      <img src="img/ionic_resize.png">
+    </ion-avatar>
+   <page-templateInfo [nameOfBase] = "nameBaseCuaHang" [dataOfBase]="cuahangBase">
+   </page-templateInfo>
+</ion-item>
+
+
+
+</ion-content>
+
+ 
