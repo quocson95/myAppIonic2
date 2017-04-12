@@ -28,7 +28,7 @@ export class Maps {
       center: latLng,
       zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      fullscreenControl:true,
+      //fullscreenControl:true, disable beacause not work on iOs
     }
  
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
