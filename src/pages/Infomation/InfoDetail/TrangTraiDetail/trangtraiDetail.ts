@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { TemplateInfo } from '../../MoreInfo/templateInfo'
 
 @Component({
   selector: 'page-trangtraidetail',
@@ -29,4 +28,44 @@ export class TrangTraiDetail {
       value:""
     }
   ]
+  tiemchungBases=[{
+    day:"Ngày",
+    type:"Loại Thuốc",
+    status:" Tình trạng vật nuôi"
+  },{
+    day:"11/2/1234",
+    type: "Vitamin B",
+    status:"Siêu vi B"
+  },{
+     day:"2/4/2012",
+    type: "Vitamin C",
+    status:"Thiếu Fe"
+  }]
+
+  bonphanBases=[{
+    day:"Ngày",
+    type:"Loại Thuốc",
+    status:" Tình trạng cây trồng"
+  },{
+    day:"11/2/1234",
+    type: "Đạm",
+    status:"Vàng lá"
+  },{
+    day:"2/4/2012",
+    type: "Lân",
+    status:"Chết nhanh"
+  }]
+  detailcompanyBases=[{
+    name:"Tên",
+    value:"Apple"
+  },{
+    name:"Địa chỉ",
+    value:"496 Hòa Hảo"
+  }]
+
+  //menthod
+  public seeOnMaps(){
+    console.log("Click See on Maps");
+    
+  }
 }

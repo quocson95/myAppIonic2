@@ -10,8 +10,83 @@
             Tên Trang Trại Ở Đây
          </ion-card-header>
     </ion-card>
-     <page-templateInfo [dataOfBase] = "infoDetail">
-    </page-templateInfo>
-    
+     <!--<page-templateInfo [dataOfBase] = "infoDetail">
+    </page-templateInfo>-->
+    <ion-grid>
+      <!--This is detail of provider-->
+      <div *ngFor="let infodetail of infoDetail">
+        <ion-row>       
+          <ion-col col-6>
+            {{infodetail.name}}
+          </ion-col>
+          <ion-col col-6>
+            {{infodetail.value}}
+          </ion-col>        
+        </ion-row>
+      </div>
+      <div class="drawLine"></div>
+      <br>
+<!--This is detail of Lich Tiem Chung-->
+      <ion-row>
+        <ion-col col-12 style="text-align:center">
+          Lịch Tiêm Chủng
+        </ion-col>
+      </ion-row>
 
+        <div *ngFor="let tiemchung of tiemchungBases">
+          <ion-row style="text-align:center">
+            <ion-col col-3>
+              {{tiemchung.day}}
+            </ion-col>
+            <ion-col col-4>
+              {{tiemchung.type}}
+            </ion-col>
+            <ion-col col-5>
+              {{tiemchung.status}}
+            </ion-col>
+          </ion-row>
+        </div>
+        <div class="drawLine"></div>
+        <br>
+<!--This is detail of Lich bon phan-->
+    <ion-row>
+        <ion-col col-12 style="text-align:center">
+          Lịch Bón Phân
+        </ion-col>
+      </ion-row>
+    <div *ngFor="let bonphan of bonphanBases">
+          <ion-row style="text-align:center">
+            <ion-col col-3>
+              {{bonphan.day}}
+            </ion-col>
+            <ion-col col-4>
+              {{bonphan.type}}
+            </ion-col>
+            <ion-col col-5>
+              {{bonphan.status}}
+            </ion-col>
+          </ion-row>
+        </div>
+      <div class="drawLine"></div>
+      <br>
+      <!--This is detail about company -->
+      <ion-row>
+        <ion-col col-12 style="text-align:center">
+          Công Ty Thu Mua
+        </ion-col>
+      </ion-row>
+      <div *ngFor="let detailcompany of detailcompanyBases">
+        <ion-row style="text-align:left">
+          <ion-col col-4>
+            {{detailcompany.name}}
+          </ion-col>
+          <ion-col col-8>
+            {{detailcompany.value}}
+          </ion-col>
+        </ion-row>
+    </div>
+    <div style="text-align:center">
+        <button ion-button color="blue" round (click)=seeOnMaps()>Xem trên GoogleMaps</button>
+    </div>
+    </ion-grid>
 </ion-content>
