@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Maps } from '../../../Maps/maps';
 
 @Component({
   selector: 'page-trangtraidetail',
@@ -66,6 +67,7 @@ export class TrangTraiDetail {
   //menthod
   public seeOnMaps(){
     console.log("Click See on Maps");
+    this.navCtrl.push(Maps);
     
   }
 }
