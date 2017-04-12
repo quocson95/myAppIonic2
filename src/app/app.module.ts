@@ -9,10 +9,13 @@ import { TabsPage } from '../pages/Tabs/tab';
 import { Camera } from '@ionic-native/camera';
 import { HistoryMenu } from '../pages/Menu/History/history';
 import { BackandService } from '../pages/Service/backandService';
-import { TemplateInfo } from '../pages/Infomation/MoreInfo/templateInfo'
+
 //Information
 import { SimpleInfo } from '../pages/Infomation/SimpleInfo/simpleInfo';
 import { MoreInfo } from '../pages/Infomation/MoreInfo/moreInfo';
+import { TemplateInfo } from '../pages/Infomation/MoreInfo/templateInfo'
+//InfoDetail
+import { TrangTraiDetail } from '../pages/Infomation/InfoDetail/TrangTraiDetail/trangtraiDetail'
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { MoreInfo } from '../pages/Infomation/MoreInfo/moreInfo';
     HistoryMenu,
     MoreInfo,
     TemplateInfo,
+    TrangTraiDetail,
 
   ],
   imports: [
@@ -39,6 +43,7 @@ import { MoreInfo } from '../pages/Infomation/MoreInfo/moreInfo';
     HistoryMenu,
     MoreInfo,
     TemplateInfo,
+    TrangTraiDetail,
     
   ],
   providers: [

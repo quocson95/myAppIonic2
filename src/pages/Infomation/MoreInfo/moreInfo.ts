@@ -2,6 +2,8 @@ import { Component,ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TemplateInfo } from 'templateInfo'
 
+import { TrangTraiDetail } from '../InfoDetail/TrangTraiDetail/trangtraiDetail'
+
 @Component({
   selector: 'page-moreinfo',
   templateUrl: 'moreInfo.html'
@@ -66,6 +68,7 @@ export class MoreInfo {
   //method
   public clickTrangTrai(){
     console.log("click Trang Trai");
+    this.navCtrl.push(TrangTraiDetail);
     
   }
 
