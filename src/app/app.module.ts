@@ -16,6 +16,7 @@ import { MoreInfo } from '../pages/Infomation/MoreInfo/moreInfo';
 import { TemplateInfo } from '../pages/Infomation/MoreInfo/templateInfo';
 //InfoDetail
 import { TrangTraiDetail } from '../pages/Infomation/InfoDetail/TrangTraiDetail/trangtraiDetail';
+import { CoSoDetail } from '../pages/Infomation/InfoDetail/CosoDetail/cosoDetail'
 import { Maps } from '../pages/Maps/maps';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { Maps } from '../pages/Maps/maps';
     MoreInfo,
     TemplateInfo,
     TrangTraiDetail,
+    CoSoDetail,
     Maps,
     
 
@@ -47,6 +49,7 @@ import { Maps } from '../pages/Maps/maps';
     MoreInfo,
     TemplateInfo,
     TrangTraiDetail,
+    CoSoDetail,
     Maps,
 
     

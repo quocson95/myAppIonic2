@@ -28,12 +28,13 @@ export class Maps {
       center: latLng,
       zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      //fullscreenControl:true, disable beacause not work on iOs
+      fullscreenControl:false, //disable beacause not work on iOs
     }
  
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+    this.addMarker();
   }
-  public addMarker(){
+  private addMarker(){
     let ln = new google.maps.LatLng(10.7598809, 106.66201760000110);
     let marker = new google.maps.Marker({
       map: this.map,
@@ -41,7 +42,7 @@ export class Maps {
       position: ln
     });
 
-    let content = "<h4>Information!</h4>";          
+    let content = "<h4>Tên Trang Trại!</h4>";          
 
     this.addInfoWindow(marker, content);
   }

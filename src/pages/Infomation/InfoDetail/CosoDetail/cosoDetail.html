@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Thông tin chi tiết </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="home">
+    <ion-card>
+        <ion-card-header style="text-align:center">
+            Tên Cơ Sở Ở Đây
+         </ion-card-header>
+    </ion-card>
+    <!--This is begin detail-->
+    <ion-grid>
+        <!--This is detail of provider-->
+        <div *ngFor="let infodetail of infoDetail">  
+            <ion-row>
+                <ion-col col-4>
+                    {{infodetail.name}}
+                </ion-col>
+                <ion-col col-8>
+                    <div (click)="openURL(infodetail.value)"*ngIf="infodetail.name=='Website'">{{infodetail.value}} </div>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-grid>
+
+</ion-content>

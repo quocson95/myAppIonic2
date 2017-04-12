@@ -1,8 +1,9 @@
 import { Component,ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { TemplateInfo } from 'templateInfo'
+import { TemplateInfo } from 'templateInfo';
 
-import { TrangTraiDetail } from '../InfoDetail/TrangTraiDetail/trangtraiDetail'
+import { TrangTraiDetail } from '../InfoDetail/TrangTraiDetail/trangtraiDetail';
+import { CoSoDetail } from '../InfoDetail/CosoDetail/cosoDetail';
 
 @Component({
   selector: 'page-moreinfo',
@@ -79,7 +80,7 @@ export class MoreInfo {
   
   public clickBanSi(){
     console.log("click Ban Si");
-    
+    this.navCtrl.push(CoSoDetail);
   }
   
   public clickCuaHang(){
